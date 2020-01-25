@@ -57,7 +57,12 @@ def gross_per_studio(collection)
       if studio_grosses.key?(collection[row_index][:movies][column_index][:studio])
         studio_grosses[collection[row_index][:movies][column_index][:studio]] += collection[row_index][:movies][column_index][:worldwide_gross]
       else 
-      
+        studio_grosses[collection[row_index][:movies][column_index][:studio]] = collection[row_index][:movies][column_index][:worldwide_gross]
+      column_index += 1 
+    end 
+    row_index += 1 
+  end
+  studio_grosses
 end
 
 def movies_with_directors_set(source)
