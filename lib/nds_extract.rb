@@ -58,6 +58,7 @@ def gross_per_studio(collection)
         studio_grosses[collection[row_index][:movies][column_index][:studio]] += collection[row_index][:movies][column_index][:worldwide_gross]
       else 
         studio_grosses[collection[row_index][:movies][column_index][:studio]] = collection[row_index][:movies][column_index][:worldwide_gross]
+      end
       column_index += 1 
     end 
     row_index += 1 
