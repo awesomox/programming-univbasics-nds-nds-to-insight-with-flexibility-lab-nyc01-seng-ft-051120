@@ -54,7 +54,8 @@ def gross_per_studio(collection)
   while row_index < collection.length do 
     column_index = 0 
     while column_index < collection[row_index][:movies].length do 
-      if !studio_grosses
+      if studio_grosses.key?(collection[row_index][:movies][column_index][:studio])
+        studio_grosses
 end
 
 def movies_with_directors_set(source)
